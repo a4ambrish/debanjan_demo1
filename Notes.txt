@@ -1,0 +1,34 @@
+// List of API in this application
+// https://docs.spring.io/spring-data/jpa/docs/current/reference/html/ 
+#Swagger Documentation Tool
+
+1. http://localhost:8080/v1/add/{aCopy}/{bCopy}
+2. http://localhost:8080/v1/sub/{aCopy}/{bCopy}
+3. http://localhost:8080/v1/multiply/{aCopy}/{bCopy}
+4. http://localhost:8080/v1/divide/{aCopy}/{bCopy}
+
+5. http://localhost:8080/v2/calculate/{myFlag}  -- POST API
+    this api will json of MathematicalCalculator Object and then 
+    store the record into database and return result of calculation to the user/client
+
+6. http://localhost:8080/v2/attempts  -- GET
+    this api will return all the records from calculator_attempt table
+    
+
+7. http://localhost:8080/v2/attempts/{id}  -- GET
+    this api will take id parameter from the URL Path based on it will fetch the selected record
+     record from the database calculator_attempt table and return to the client
+     
+     
+database name : calculator_demo
+SQL Command to create table 
+     
+create table calcutaor_attempt (
+cal_id int primary key,
+x int not null ,
+y int not null,
+res int not null,
+my_flag character varying (20) not null,
+op_dt timestamp without time zone not null	
+);
+

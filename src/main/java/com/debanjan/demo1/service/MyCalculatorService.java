@@ -19,7 +19,7 @@ public class MyCalculatorService {
 	 * @return this method will return the calculated value based on input myflag
 	 *  
 	 * **/
-	public String calucate(int a, int b, int myFlag) {
+	public String calculate(int a, int b, String myFlag) {
 		String result="";
 		MathematicalCalculator obj = new MathematicalCalculator();
 		obj.setA(a);
@@ -31,19 +31,19 @@ public class MyCalculatorService {
 		
 		// this is the business logic
 		switch (myFlag) {
-		case 1:
+		case "1":
 			result = obj.add();
 			break;
 
-		case 2:
+		case "2":
 			result = obj.sub();
 			break;
 
-		case 3:
+		case "3":
 			result = obj.multiply();
 			break;
 
-		case 4:
+		case "4":
 			result = obj.divide();
 			break;
 
